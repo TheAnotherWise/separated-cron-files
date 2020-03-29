@@ -8,9 +8,8 @@
 ## How to use?
  * Need to be sure when use `>` / `>>` to .log
    * When script run once time per day `>` 
-   * When script run many times per day `>>`
-   * Need to care disk space if use `>>`
-   
+   * When script run many times per day `>>` (care disk space)
+
 ## Structure 
 ```bash
 mkdir -p /root/crontab.d
