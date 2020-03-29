@@ -6,7 +6,7 @@
  * errors/problems of scripts log to `.log` file (2>&1)
  
 ## How to use?
- * be sure when use `>` / `>>`, example:
+ * be sure when use `>`, `>>`, example:
    * script run once time per day `>` 
    * script run many times per day `>>` (care disk space)
 
