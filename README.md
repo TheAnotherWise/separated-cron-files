@@ -41,3 +41,7 @@ find /root/crontab.d -type f -exec chmod 600 {} \;
 30 1 * * * /bin/bash /root/crontab.d/apache2/stop.sh > /root/crontab.d/apache2/stop.log 2>&1
 31 1 * * * /bin/bash /root/crontab.d/apache2/start.sh > /root/crontab.d/apache2/start.log 2>&1
 ```
+
+## Install 
+
+cat /root/crontab.d/*.cron | crontab -
