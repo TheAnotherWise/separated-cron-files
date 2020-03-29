@@ -3,28 +3,38 @@
 ## Benefits
  * Separated script per service/program/type/etc.
  * Creating log file from runned script with `.log` file extension
-
+ * Errors/problems of scripts log to `.log` file (2>&1)
+ 
 ## How to use?
  * Need to be sure when use `>` / `>>` to .log
    * When script run once time per day `>` 
    * When script run many times per day `>>`
-   - this is a complete item
-
--fdhfdg
-
-## Example create structure 
+   * Need to care disk space if use `>>`
+   
+## Structure 
 ```bash
 mkdir -p /root/crontab.d
+chmod 700 /root/crontab.d
+
 mkdir -p /root/crontab.d/system
+chmod 700 /root/crontab.d/system
+
 mkdir -p /root/crontab.d/apache2
+chmod 700 /root/crontab.d/apache2
 
 touch /root/crontab.d/system.cron
+chmod 600 /root/crontab.d/system.cron
+
 touch /root/crontab.d/system/log.sh
 touch /root/crontab.d/system/test.sh
+chmod 600 /root/crontab.d/apache2/*
 
 touch /root/crontab.d/apache2.cron
+chmod 600 /root/crontab.d/apache2.cron
+
 touch /root/crontab.d/apache2/stop.sh
 touch /root/crontab.d/apache2/start.sh
+chmod 600 /root/crontab.d/apache2/*
 ```
 
 ### /root/crontab.d/system.cron
