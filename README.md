@@ -16,11 +16,14 @@
 mkdir -p /root/crontab.d
 
 mkdir -p /root/crontab.d/system
+mkdir -p /root/crontab.d/apache2
+
+# System
 touch /root/crontab.d/system.cron
 touch /root/crontab.d/system/alpha.sh
 touch /root/crontab.d/system/beta.sh
 
-mkdir -p /root/crontab.d/apache2
+# Apache2
 touch /root/crontab.d/apache2.cron
 touch /root/crontab.d/apache2/stop.sh
 touch /root/crontab.d/apache2/start.sh
