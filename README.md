@@ -14,27 +14,19 @@
 ## Structure 
 ```bash
 mkdir -p /root/crontab.d
-chmod 700 /root/crontab.d
 
 mkdir -p /root/crontab.d/system
-chmod 700 /root/crontab.d/system
+touch /root/crontab.d/system.cron
+touch /root/crontab.d/system/alpha.sh
+touch /root/crontab.d/system/beta.sh
 
 mkdir -p /root/crontab.d/apache2
-chmod 700 /root/crontab.d/apache2
-
-touch /root/crontab.d/system.cron
-chmod 600 /root/crontab.d/system.cron
-
-touch /root/crontab.d/system/log.sh
-touch /root/crontab.d/system/test.sh
-chmod 600 /root/crontab.d/apache2/*
-
 touch /root/crontab.d/apache2.cron
-chmod 600 /root/crontab.d/apache2.cron
-
 touch /root/crontab.d/apache2/stop.sh
 touch /root/crontab.d/apache2/start.sh
-chmod 600 /root/crontab.d/apache2/*
+
+find /root/crontab.d -type d -exec chmod 700 {} \;
+find /root/crontab.d -type f -exec chmod 600 {} \;
 ```
 
 ### /root/crontab.d/system.cron
