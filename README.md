@@ -12,38 +12,38 @@
 
 ## Structure 
 ```bash
-mkdir -p /root/crontab.d
-mkdir -p /root/crontab.d/system
-mkdir -p /root/crontab.d/apache2
+mkdir -p $HOME/crontab.d
+mkdir -p $HOME/crontab.d/system
+mkdir -p $HOME/crontab.d/apache2
 
-touch /root/crontab.d/system.cron
-touch /root/crontab.d/system/alpha.sh
-touch /root/crontab.d/system/beta.sh
+touch $HOME/crontab.d/system.cron
+touch $HOME/crontab.d/system/alpha.sh
+touch $HOME/crontab.d/system/beta.sh
 
-touch /root/crontab.d/apache2.cron
-touch /root/crontab.d/apache2/stop.sh
-touch /root/crontab.d/apache2/start.sh
+touch $HOME/crontab.d/apache2.cron
+touch $HOME/crontab.d/apache2/stop.sh
+touch $HOME/crontab.d/apache2/start.sh
 
-find /root/crontab.d -type d -exec chmod 700 {} \;
-find /root/crontab.d -type f -exec chmod 600 {} \;
+find $HOME/crontab.d -type d -exec chmod 700 {} \;
+find $HOME/crontab.d -type f -exec chmod 600 {} \;
 ```
 
 ## Cron files
 
-#### `/root/crontab.d/system.cron`
+#### `$HOME/crontab.d/system.cron`
 ```bash
-*/1 * * * * /bin/bash /root/crontab.d/system/log.sh >> /root/crontab.d/system/log.log 2>&1
-*/1 * * * * /bin/bash /root/crontab.d/system/test.sh >> /root/crontab.d/system/test.log 2>&1
+*/1 * * * * /bin/bash $HOME/crontab.d/system/log.sh >> $HOME/crontab.d/system/log.log 2>&1
+*/1 * * * * /bin/bash $HOME/crontab.d/system/test.sh >> $HOME/crontab.d/system/test.log 2>&1
 ```
 
-#### `/root/crontab.d/apache2.cron`
+#### `$HOME/crontab.d/apache2.cron`
 ```
-30 1 * * * /bin/bash /root/crontab.d/apache2/stop.sh > /root/crontab.d/apache2/stop.log 2>&1
-31 1 * * * /bin/bash /root/crontab.d/apache2/start.sh > /root/crontab.d/apache2/start.log 2>&1
+30 1 * * * /bin/bash $HOME/crontab.d/apache2/stop.sh > $HOME/crontab.d/apache2/stop.log 2>&1
+31 1 * * * /bin/bash $HOME/crontab.d/apache2/start.sh > $HOME/crontab.d/apache2/start.log 2>&1
 ```
 
 ## Install 
 
 ```bash
-cat /root/crontab.d/*.cron | crontab -
+cat $HOME/crontab.d/*.cron | crontab -
 ```
