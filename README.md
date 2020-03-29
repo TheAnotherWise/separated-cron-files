@@ -44,4 +44,6 @@ find /root/crontab.d -type f -exec chmod 600 {} \;
 
 ## Install 
 
+```bash
 cat /root/crontab.d/*.cron | crontab -
+```
