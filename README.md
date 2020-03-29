@@ -1,14 +1,14 @@
 # Separated cron files..
 
 ## Benefits
- * Separated script per service/program/type/etc.
- * Creating log file from runned script with `.log` file extension
- * Errors/problems of scripts log to `.log` file (2>&1)
+ * separated script per service/program/type/etc.
+ * creating log file from runned script with `.log` file extension
+ * errors/problems of scripts log to `.log` file (2>&1)
  
 ## How to use?
- * Need to be sure when use `>` / `>>` to .log
-   * When script run once time per day `>` 
-   * When script run many times per day `>>` (care disk space)
+ * be sure when use `>` / `>>`, example:
+   * script run once time per day `>` 
+   * script run many times per day `>>` (care disk space)
 
 ## Structure 
 ```bash
