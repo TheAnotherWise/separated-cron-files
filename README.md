@@ -26,6 +26,7 @@ find $HOME/crontab.d -type f -exec chmod 600 {} \;
 30 1 * * * /bin/bash $HOME/crontab.d/apache2/stop.sh > $HOME/crontab.d/apache2/stop.log 2>&1
 31 1 * * * /bin/bash $HOME/crontab.d/apache2/start.sh > $HOME/crontab.d/apache2/start.log 2>&1
 ```
+---
 
 ```bash
 cat $HOME/crontab.d/*.cron | crontab -
