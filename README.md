@@ -1,4 +1,3 @@
-## Structure 
 ```bash
 mkdir -p $HOME/crontab.d
 mkdir -p $HOME/crontab.d/system
@@ -15,8 +14,6 @@ touch $HOME/crontab.d/apache2/start.sh
 find $HOME/crontab.d -type d -exec chmod 700 {} \;
 find $HOME/crontab.d -type f -exec chmod 600 {} \;
 ```
-
-## Cron files
 
 #### `$HOME/crontab.d/system.cron`
 ```bash
