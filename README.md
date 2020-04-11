@@ -1,15 +1,3 @@
-# Separated cron files..
-
-## Benefits
- * separated script per service/program/type/etc.
- * creating log file from runned script with `.log` file extension
- * errors/problems of scripts log to `.log` file (2>&1)
- 
-## How to use?
- * be sure when use `>`, `>>`, example:
-   * script run once time per day `>` 
-   * script run many times per day `>>` (care disk space)
-
 ## Structure 
 ```bash
 mkdir -p $HOME/crontab.d
